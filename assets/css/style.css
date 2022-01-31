@@ -205,7 +205,7 @@ trainer-bio p {
     padding: 0 100px 20px 100px;
     border-bottom: 3px solid;
     margin-bottom:35px;
-    color:#24e76;
+    color:#024e76;
 }
 .contact {
     text-align: center;
@@ -226,3 +226,23 @@ trainer-bio p {
     vertical-align:top;
     margin:30px 0 0 60px;
 }
+.contact-info h3 {
+    color:#fce138;
+    font-size: 32px;
+}
+.contact-info p {
+    margin:20px 0;
+    line-height:1.5;
+    font-size:20px;
+    font-style:normal;
+}
+.contact-info address{
+    margin:20px 0;
+    line-height: 1.5;
+    font-size:20px;
+    font-style:normal;
+}
+.contact-info a{
+    color:#fce138;
+}
+/*reach out section end*/

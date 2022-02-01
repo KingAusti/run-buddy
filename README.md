@@ -1,2 +1,14 @@
-# run-buddy
-This is the freshly finished Run Buddy web page.
+# Run Buddy
+
+## Purpose
+A website that offers fitness training services.
+
+## Built with
+* HTML
+* CSS
+
+## Website
+https://kingausti.github.io/run-buddy
+
+## Contribution
+Made with <3 by Austin Henry

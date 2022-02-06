@@ -7,18 +7,29 @@ body {
     color: #39a6b2;
     font-family: Helvetica, Arial, sans-serif;
 }
+/*header start*/
 header {
     padding: 20px 35px;
     background-color: #39a6b2;
     display: flex;
     justify-content: space-between;
     flex-wrap:wrap;
+    background-image:url("../images/hero-bg.jpg");
+    background-size:cover;
+    position: -webkit-sticky;
+    position:sticky;
+    top:0;
+    background-position:center;
+    background-attachment:fixed;
+    background-position:80%;
+    top:0;
 }
 header h1 {
     font-weight: bold;
     font-size: 36px;
     color: #fce138;
     margin: 0;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 header a {
     text-decoration: none;
@@ -33,15 +44,23 @@ header nav ul {
     justify-content:space-between;
     align-items:center;
     list-style:none;
+    text-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 /*header nav ul li {
     display: inline;
 }*/
+header nav ul li a:hover{
+    background: #fce138;
+    color:#024e76;
+    border-radius:10px;
+    text-shadow:none;
+}
 header nav ul li a {
     padding:10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
 }
+/*header end*/
 /*footer start*/
 footer {
     display:flex;
@@ -90,17 +109,20 @@ section {
     font-size: 55px;
     color:#fce138;
     font-weight:lighter;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 /*Hero Style Ends*/
 /*Hero Form Style Start*/
 .hero-form {
     color: #024e76;
-    background: #fce138;
+    background: rgba(252,225,56,0.8);
     padding: 20px;    
     border-style: solid;    
     border-color: #024e76;
     width:40%;
-    margin:3.5%;  
+    margin:3.5%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius:15px;
 }
 .hero-form p {
     margin: 5px 0 15px 0;
@@ -109,6 +131,10 @@ section {
     font-size:24px;
     margin: 0;
 }
+.form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+  }
 .form-input {
     border: 1px solid #024e76;
     display: block;
@@ -117,9 +143,14 @@ section {
     color: #024e76;
     width:100%;
     margin-bottom: 15px;
+    border-radius:10px;
+    background-color: rgba(255,255,255, 0.75);
 }
 .hero-form label {
     margin: 0 5px;
+}
+.hero-form button:hover{
+    background-color:#39a6b2;
 }
 .hero-form button {
     color: #fce138;
@@ -128,6 +159,7 @@ section {
     padding:5px 10px;
     font-size:17px;
     font-weight: bold;
+    border-radius:10px;
 
 }
 /*Hero Form Style End*/
@@ -162,12 +194,14 @@ section {
 .step {
     margin: 50px auto;
     padding-bottom:50px;
-    width:80%;
-    border-bottom:1px solid #39a6b2;
+    width:80%;    
     display:flex;
     flex-wrap:wrap;
     align-items: center;
     justify-content:space-between;
+}
+.step:not(:last-child){
+    border-bottom:1px solid #39a6b2;
 }
 .step h3 {
     color:#024e76;
@@ -286,15 +320,28 @@ trainer-bio p {
 .contact-info a{
     color:#fce138;
 }
+.contact-form:focus{
+    background-color:rgba(255,255,255,1);
+    outline:none;
+}
+.contact-form input:focus, .contact-form textarea:focus{
+    color: rgba(2,78,118,0.75);
+    outline:none;
+}
 .contact-form input, .contact-form textarea {
-    border: 1px solid #024e76;
+    border: 1px solid rgba(2,78,118,0.75);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: rgba(2,78,118,0.75);
     width:100%;
     margin-bottom:15px;
     margin-top:5px;
+    border-radius:10px;
+}
+.contact-form button:hover{
+    color:#fce138;
+    background:#39a6b2;
 }
 .contact-form button {
     width:100%;
@@ -304,6 +351,7 @@ trainer-bio p {
     text-align: center;
     padding:15px 0;
     font-size:16px;
+    border-radius:10px;    
 }
 /*reach out section end*/
 /*Utilities*/
@@ -320,7 +368,8 @@ trainer-bio p {
 @media screen and (max-width: 980px) {
     header {
         padding-bottom: 0;
-        justify-content: center;    
+        justify-content: center;
+        position:relative;     
     }
     header h1 {
         width:100%;
@@ -352,6 +401,7 @@ trainer-bio p {
     }
     .contact-info iframe{
         flex: 1 100%;
+        border-radius:10px;
     }
   }  
   /* MEDIA QUERY FOR TABLETS AND SMALLER */
